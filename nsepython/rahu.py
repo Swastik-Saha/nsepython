@@ -34,7 +34,6 @@ if(mode=='local'):
             #print(output)
         except ValueError:
             s =requests.Session()
-            output = s.get("http://nseindia.com",headers=headers)
             output = s.get(payload,headers=headers).json()
         return output
 
